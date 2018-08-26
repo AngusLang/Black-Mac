@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */; };
+		3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A132131A4BF00D55B76 /* ViewController.swift */; };
+		3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE3A152131A4C000D55B76 /* Assets.xcassets */; };
+		3CEE3A192131A4C000D55B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE3A172131A4C000D55B76 /* Main.storyboard */; };
+		3CEE3A3B2131A60200D55B76 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A232131A60200D55B76 /* Geometry.swift */; };
+		3CEE3A3C2131A60200D55B76 /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A242131A60200D55B76 /* RenderNode.swift */; };
+		3CEE3A3D2131A60200D55B76 /* PerspectiveCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A252131A60200D55B76 /* PerspectiveCamera.swift */; };
+		3CEE3A3E2131A60200D55B76 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A262131A60200D55B76 /* Controller.swift */; };
+		3CEE3A3F2131A60200D55B76 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A272131A60200D55B76 /* Material.swift */; };
+		3CEE3A402131A60200D55B76 /* CubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A282131A60200D55B76 /* CubeNode.swift */; };
+		3CEE3A412131A60200D55B76 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A292131A60200D55B76 /* Camera.swift */; };
+		3CEE3A422131A60200D55B76 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A2A2131A60200D55B76 /* Node.swift */; };
+		3CEE3A432131A60200D55B76 /* Spherical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A2C2131A60200D55B76 /* Spherical.swift */; };
+		3CEE3A442131A60200D55B76 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A2D2131A60200D55B76 /* Size.swift */; };
+		3CEE3A452131A60200D55B76 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A2E2131A60200D55B76 /* Vector2.swift */; };
+		3CEE3A462131A60200D55B76 /* MathUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A2F2131A60200D55B76 /* MathUtil.swift */; };
+		3CEE3A472131A60200D55B76 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A302131A60200D55B76 /* Matrix4.swift */; };
+		3CEE3A482131A60200D55B76 /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A312131A60200D55B76 /* Quaternion.swift */; };
+		3CEE3A492131A60200D55B76 /* Matrix3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A322131A60200D55B76 /* Matrix3.swift */; };
+		3CEE3A4A2131A60200D55B76 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A332131A60200D55B76 /* Vector3.swift */; };
+		3CEE3A4B2131A60200D55B76 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A342131A60200D55B76 /* Types.swift */; };
+		3CEE3A4C2131A60200D55B76 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A362131A60200D55B76 /* RenderView.swift */; };
+		3CEE3A4D2131A60200D55B76 /* demo.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A382131A60200D55B76 /* demo.metal */; };
+		3CEE3A4E2131A60200D55B76 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A392131A60200D55B76 /* pbr.metal */; };
+		3CEE3A4F2131A60200D55B76 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A3A2131A60200D55B76 /* Renderer.swift */; };
+		3CEE3A522132548E00D55B76 /* GLTFLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A512132548E00D55B76 /* GLTFLoader.swift */; };
+		3CEE3A552132574600D55B76 /* GLTFBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A542132574600D55B76 /* GLTFBuffer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CEE3A0E2131A4BF00D55B76 /* Black-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CEE3A132131A4BF00D55B76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CEE3A152131A4C000D55B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CEE3A182131A4C000D55B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CEE3A1A2131A4C000D55B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CEE3A1B2131A4C000D55B76 /* Black_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Black_Mac.entitlements; sourceTree = "<group>"; };
+		3CEE3A232131A60200D55B76 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		3CEE3A242131A60200D55B76 /* RenderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderNode.swift; sourceTree = "<group>"; };
+		3CEE3A252131A60200D55B76 /* PerspectiveCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveCamera.swift; sourceTree = "<group>"; };
+		3CEE3A262131A60200D55B76 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		3CEE3A272131A60200D55B76 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		3CEE3A282131A60200D55B76 /* CubeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeNode.swift; sourceTree = "<group>"; };
+		3CEE3A292131A60200D55B76 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		3CEE3A2A2131A60200D55B76 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		3CEE3A2C2131A60200D55B76 /* Spherical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spherical.swift; sourceTree = "<group>"; };
+		3CEE3A2D2131A60200D55B76 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		3CEE3A2E2131A60200D55B76 /* Vector2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2.swift; sourceTree = "<group>"; };
+		3CEE3A2F2131A60200D55B76 /* MathUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathUtil.swift; sourceTree = "<group>"; };
+		3CEE3A302131A60200D55B76 /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
+		3CEE3A312131A60200D55B76 /* Quaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quaternion.swift; sourceTree = "<group>"; };
+		3CEE3A322131A60200D55B76 /* Matrix3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix3.swift; sourceTree = "<group>"; };
+		3CEE3A332131A60200D55B76 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		3CEE3A342131A60200D55B76 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		3CEE3A362131A60200D55B76 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		3CEE3A382131A60200D55B76 /* demo.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = demo.metal; sourceTree = "<group>"; };
+		3CEE3A392131A60200D55B76 /* pbr.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pbr.metal; sourceTree = "<group>"; };
+		3CEE3A3A2131A60200D55B76 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		3CEE3A512132548E00D55B76 /* GLTFLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFLoader.swift; sourceTree = "<group>"; };
+		3CEE3A542132574600D55B76 /* GLTFBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFBuffer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CEE3A0B2131A4BF00D55B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CEE3A052131A4BF00D55B76 = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A102131A4BF00D55B76 /* Black-Mac */,
+				3CEE3A0F2131A4BF00D55B76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CEE3A0F2131A4BF00D55B76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A0E2131A4BF00D55B76 /* Black-Mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CEE3A102131A4BF00D55B76 /* Black-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A212131A60200D55B76 /* src */,
+				3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */,
+				3CEE3A132131A4BF00D55B76 /* ViewController.swift */,
+				3CEE3A152131A4C000D55B76 /* Assets.xcassets */,
+				3CEE3A172131A4C000D55B76 /* Main.storyboard */,
+				3CEE3A1A2131A4C000D55B76 /* Info.plist */,
+				3CEE3A1B2131A4C000D55B76 /* Black_Mac.entitlements */,
+			);
+			path = "Black-Mac";
+			sourceTree = "<group>";
+		};
+		3CEE3A212131A60200D55B76 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A502132547500D55B76 /* loader */,
+				3CEE3A222131A60200D55B76 /* core */,
+				3CEE3A2B2131A60200D55B76 /* math */,
+				3CEE3A352131A60200D55B76 /* view */,
+				3CEE3A372131A60200D55B76 /* kernel */,
+				3CEE3A3A2131A60200D55B76 /* Renderer.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3CEE3A222131A60200D55B76 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A232131A60200D55B76 /* Geometry.swift */,
+				3CEE3A242131A60200D55B76 /* RenderNode.swift */,
+				3CEE3A252131A60200D55B76 /* PerspectiveCamera.swift */,
+				3CEE3A262131A60200D55B76 /* Controller.swift */,
+				3CEE3A272131A60200D55B76 /* Material.swift */,
+				3CEE3A282131A60200D55B76 /* CubeNode.swift */,
+				3CEE3A292131A60200D55B76 /* Camera.swift */,
+				3CEE3A2A2131A60200D55B76 /* Node.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		3CEE3A2B2131A60200D55B76 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A2C2131A60200D55B76 /* Spherical.swift */,
+				3CEE3A2D2131A60200D55B76 /* Size.swift */,
+				3CEE3A2E2131A60200D55B76 /* Vector2.swift */,
+				3CEE3A2F2131A60200D55B76 /* MathUtil.swift */,
+				3CEE3A302131A60200D55B76 /* Matrix4.swift */,
+				3CEE3A312131A60200D55B76 /* Quaternion.swift */,
+				3CEE3A322131A60200D55B76 /* Matrix3.swift */,
+				3CEE3A332131A60200D55B76 /* Vector3.swift */,
+				3CEE3A342131A60200D55B76 /* Types.swift */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		3CEE3A352131A60200D55B76 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A362131A60200D55B76 /* RenderView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3CEE3A372131A60200D55B76 /* kernel */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A382131A60200D55B76 /* demo.metal */,
+				3CEE3A392131A60200D55B76 /* pbr.metal */,
+			);
+			path = kernel;
+			sourceTree = "<group>";
+		};
+		3CEE3A502132547500D55B76 /* loader */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A532132572E00D55B76 /* gltf */,
+			);
+			path = loader;
+			sourceTree = "<group>";
+		};
+		3CEE3A532132572E00D55B76 /* gltf */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A512132548E00D55B76 /* GLTFLoader.swift */,
+				3CEE3A542132574600D55B76 /* GLTFBuffer.swift */,
+			);
+			path = gltf;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CEE3A0D2131A4BF00D55B76 /* Black-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CEE3A1E2131A4C000D55B76 /* Build configuration list for PBXNativeTarget "Black-Mac" */;
+			buildPhases = (
+				3CEE3A0A2131A4BF00D55B76 /* Sources */,
+				3CEE3A0B2131A4BF00D55B76 /* Frameworks */,
+				3CEE3A0C2131A4BF00D55B76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Black-Mac";
+			productName = "Black-Mac";
+			productReference = 3CEE3A0E2131A4BF00D55B76 /* Black-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CEE3A062131A4BF00D55B76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = com.black;
+				TargetAttributes = {
+					3CEE3A0D2131A4BF00D55B76 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3CEE3A092131A4BF00D55B76 /* Build configuration list for PBXProject "Black-Mac" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CEE3A052131A4BF00D55B76;
+			productRefGroup = 3CEE3A0F2131A4BF00D55B76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CEE3A0D2131A4BF00D55B76 /* Black-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CEE3A0C2131A4BF00D55B76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */,
+				3CEE3A192131A4C000D55B76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CEE3A0A2131A4BF00D55B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CEE3A3F2131A60200D55B76 /* Material.swift in Sources */,
+				3CEE3A482131A60200D55B76 /* Quaternion.swift in Sources */,
+				3CEE3A422131A60200D55B76 /* Node.swift in Sources */,
+				3CEE3A3D2131A60200D55B76 /* PerspectiveCamera.swift in Sources */,
+				3CEE3A4B2131A60200D55B76 /* Types.swift in Sources */,
+				3CEE3A4F2131A60200D55B76 /* Renderer.swift in Sources */,
+				3CEE3A492131A60200D55B76 /* Matrix3.swift in Sources */,
+				3CEE3A432131A60200D55B76 /* Spherical.swift in Sources */,
+				3CEE3A452131A60200D55B76 /* Vector2.swift in Sources */,
+				3CEE3A472131A60200D55B76 /* Matrix4.swift in Sources */,
+				3CEE3A442131A60200D55B76 /* Size.swift in Sources */,
+				3CEE3A4E2131A60200D55B76 /* pbr.metal in Sources */,
+				3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */,
+				3CEE3A3C2131A60200D55B76 /* RenderNode.swift in Sources */,
+				3CEE3A3E2131A60200D55B76 /* Controller.swift in Sources */,
+				3CEE3A462131A60200D55B76 /* MathUtil.swift in Sources */,
+				3CEE3A3B2131A60200D55B76 /* Geometry.swift in Sources */,
+				3CEE3A402131A60200D55B76 /* CubeNode.swift in Sources */,
+				3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */,
+				3CEE3A4A2131A60200D55B76 /* Vector3.swift in Sources */,
+				3CEE3A4D2131A60200D55B76 /* demo.metal in Sources */,
+				3CEE3A4C2131A60200D55B76 /* RenderView.swift in Sources */,
+				3CEE3A552132574600D55B76 /* GLTFBuffer.swift in Sources */,
+				3CEE3A412131A60200D55B76 /* Camera.swift in Sources */,
+				3CEE3A522132548E00D55B76 /* GLTFLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3CEE3A172131A4C000D55B76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CEE3A182131A4C000D55B76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CEE3A1C2131A4C000D55B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CEE3A1D2131A4C000D55B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3CEE3A1F2131A4C000D55B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Black-Mac/Black_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 35827ZT3A9;
+				INFOPLIST_FILE = "Black-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.black.Black-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3CEE3A202131A4C000D55B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Black-Mac/Black_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 35827ZT3A9;
+				INFOPLIST_FILE = "Black-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.black.Black-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CEE3A092131A4BF00D55B76 /* Build configuration list for PBXProject "Black-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CEE3A1C2131A4C000D55B76 /* Debug */,
+				3CEE3A1D2131A4C000D55B76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CEE3A1E2131A4C000D55B76 /* Build configuration list for PBXNativeTarget "Black-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CEE3A1F2131A4C000D55B76 /* Debug */,
+				3CEE3A202131A4C000D55B76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CEE3A062131A4BF00D55B76 /* Project object */;
+}
