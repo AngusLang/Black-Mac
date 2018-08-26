@@ -9,14 +9,15 @@
 import Foundation
 import Metal
 
-public class Node {
+public class Node: Black {
+
     var position = Vector3()
     var quaternion = Quaternion()
     var scale = Vector3(1, 1, 1)
     var worldMatrix = Matrix4()
     
-    init() {}
-    
+    var chidren: [Node] = []
+
     @discardableResult
     public func updateWorldMatrix() -> Node {
         worldMatrix.compose(position, quaternion, scale)

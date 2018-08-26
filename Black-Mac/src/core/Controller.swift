@@ -14,7 +14,7 @@ let RotateAngleFactor: Float = 2.5;
 
 let v = Vector3()
 
-public class Controller {
+public class Controller: Black {
     
     var spherical: Spherical = Spherical()
     var center: Vector3 = Vector3()

@@ -7,8 +7,8 @@
 //
 import MetalKit
 
-public class Geometry {
- 
+public class Geometry: Black {
+    
     var attribute: [Attribute]?
     var vertexBuffer: MTLBuffer?
     

@@ -23,6 +23,8 @@ class ViewController: NSViewController {
         renderView.delegate = renderer
         renderView.preferredFramesPerSecond = 60
         renderer?.nodes.append(CubeNode())
+        
+        GLTFLoader.load(url: URL(string: "http://localhost/box.gltf")!)
     }
     
     override func mouseDown(with event: NSEvent) {

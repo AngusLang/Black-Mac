@@ -7,6 +7,8 @@
 //
 import Foundation
 
+typealias JSON = [String: Any]
+
 public class GLTFLoader {
     
     var _cache: Bool = false
@@ -17,14 +19,21 @@ public class GLTFLoader {
     
     var cacheMap: NSDictionary = NSDictionary()
 
+    @discardableResult
     static func load(url: URL) -> Node {
         let root = Node()
         var buffers: [Data]
+        var views: [GLTFBufferView]
+        var accessors: [GLTFAccesssor]
         
         let jsonStr = try! String.init(contentsOf: url)
-        let data = JSONSerialization.jsonObject(with: jsonStr.data(using: .utf8)!, options: []) as! [String: Any?]
-        buffer = GLTFBuffer.process(buffers: data["buffers"] as! [[String: Any]])
-
+        let data = try! JSONSerialization.jsonObject(with: jsonStr.data(using: .utf8)!, options: []) as! JSON
+        
+        // process buffer
+        buffers = GLTFBuffer.Parse(data: data["buffers"] as! [JSON])
+        views = GLTFBufferView.Parse(data: data["bufferViews"] as! [JSON], buffers: buffers)
+        accessors = GLTFAccesssor.Parse(data: data["accessors"] as! [JSON], views: views)
+        print(views, accessors)
         return root
     }
 }

@@ -6,6 +6,6 @@
 //  Copyright © 2018年 qunhequnhe. All rights reserved.
 //
 
-public class Material {
+public class Material: Black {
     
 }
