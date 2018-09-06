@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0287EE2140C33500227E48 /* common.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3C0287ED2140C33500227E48 /* common.metal */; };
+		3C34B7D0213EBAFA00EBBBA7 /* OBJLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */; };
+		3C34B7D4213ED29200EBBBA7 /* box.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3C34B7D2213ED29200EBBBA7 /* box.mtl */; };
+		3C34B7D5213ED29200EBBBA7 /* box.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3C34B7D3213ED29200EBBBA7 /* box.obj */; };
 		3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */; };
 		3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A132131A4BF00D55B76 /* ViewController.swift */; };
 		3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE3A152131A4C000D55B76 /* Assets.xcassets */; };
@@ -32,17 +36,17 @@
 		3CEE3A4D2131A60200D55B76 /* demo.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A382131A60200D55B76 /* demo.metal */; };
 		3CEE3A4E2131A60200D55B76 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A392131A60200D55B76 /* pbr.metal */; };
 		3CEE3A4F2131A60200D55B76 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A3A2131A60200D55B76 /* Renderer.swift */; };
-		3CEE3A522132548E00D55B76 /* GLTFLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A512132548E00D55B76 /* GLTFLoader.swift */; };
-		3CEE3A552132574600D55B76 /* GLTFBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A542132574600D55B76 /* GLTFBuffer.swift */; };
-		3CEE3A582132E97200D55B76 /* GLTFScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A572132E97200D55B76 /* GLTFScene.swift */; };
-		3CEE3A5A2132EA4C00D55B76 /* GLTFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A592132EA4C00D55B76 /* GLTFNode.swift */; };
-		3CEE3A5C2132EB1800D55B76 /* GLTFMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A5B2132EB1800D55B76 /* GLTFMesh.swift */; };
 		3CEE3A602132EBF700D55B76 /* Black.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A5F2132EBF700D55B76 /* Black.swift */; };
-		3CEE3A622132EE7A00D55B76 /* GLTFAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A612132EE7A00D55B76 /* GLTFAccessor.swift */; };
-		3CEE3A642132EE8B00D55B76 /* GLTFBufferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A632132EE8B00D55B76 /* GLTFBufferView.swift */; };
+		3CF84C8821401582003F3A07 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF84C8721401582003F3A07 /* Printer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0287ED2140C33500227E48 /* common.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = common.metal; sourceTree = "<group>"; };
+		3C0287EF2140C65100227E48 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		3C0287F02140C6CC00227E48 /* pbr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pbr.h; sourceTree = "<group>"; };
+		3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBJLoader.swift; sourceTree = "<group>"; };
+		3C34B7D2213ED29200EBBBA7 /* box.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.mtl; sourceTree = "<group>"; };
+		3C34B7D3213ED29200EBBBA7 /* box.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
 		3CEE3A0E2131A4BF00D55B76 /* Black-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CEE3A132131A4BF00D55B76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,15 +75,9 @@
 		3CEE3A382131A60200D55B76 /* demo.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = demo.metal; sourceTree = "<group>"; };
 		3CEE3A392131A60200D55B76 /* pbr.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pbr.metal; sourceTree = "<group>"; };
 		3CEE3A3A2131A60200D55B76 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		3CEE3A512132548E00D55B76 /* GLTFLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFLoader.swift; sourceTree = "<group>"; };
-		3CEE3A542132574600D55B76 /* GLTFBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFBuffer.swift; sourceTree = "<group>"; };
 		3CEE3A562132E67100D55B76 /* Black-Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Black-Mac.entitlements"; sourceTree = "<group>"; };
-		3CEE3A572132E97200D55B76 /* GLTFScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFScene.swift; sourceTree = "<group>"; };
-		3CEE3A592132EA4C00D55B76 /* GLTFNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFNode.swift; sourceTree = "<group>"; };
-		3CEE3A5B2132EB1800D55B76 /* GLTFMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFMesh.swift; sourceTree = "<group>"; };
 		3CEE3A5F2132EBF700D55B76 /* Black.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black.swift; sourceTree = "<group>"; };
-		3CEE3A612132EE7A00D55B76 /* GLTFAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFAccessor.swift; sourceTree = "<group>"; };
-		3CEE3A632132EE8B00D55B76 /* GLTFBufferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTFBufferView.swift; sourceTree = "<group>"; };
+		3CF84C8721401582003F3A07 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C34B7D1213ED29200EBBBA7 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				3C34B7D2213ED29200EBBBA7 /* box.mtl */,
+				3C34B7D3213ED29200EBBBA7 /* box.obj */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		3CEE3A052131A4BF00D55B76 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3CEE3A562132E67100D55B76 /* Black-Mac.entitlements */,
+				3C34B7D1213ED29200EBBBA7 /* assets */,
 				3CEE3A212131A60200D55B76 /* src */,
 				3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */,
 				3CEE3A132131A4BF00D55B76 /* ViewController.swift */,
@@ -127,6 +135,7 @@
 		3CEE3A212131A60200D55B76 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3CF84C8621401571003F3A07 /* common */,
 				3CEE3A502132547500D55B76 /* loader */,
 				3CEE3A222131A60200D55B76 /* core */,
 				3CEE3A2B2131A60200D55B76 /* math */,
@@ -182,6 +191,9 @@
 			children = (
 				3CEE3A382131A60200D55B76 /* demo.metal */,
 				3CEE3A392131A60200D55B76 /* pbr.metal */,
+				3C0287ED2140C33500227E48 /* common.metal */,
+				3C0287EF2140C65100227E48 /* common.h */,
+				3C0287F02140C6CC00227E48 /* pbr.h */,
 			);
 			path = kernel;
 			sourceTree = "<group>";
@@ -189,23 +201,17 @@
 		3CEE3A502132547500D55B76 /* loader */ = {
 			isa = PBXGroup;
 			children = (
-				3CEE3A532132572E00D55B76 /* gltf */,
+				3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */,
 			);
 			path = loader;
 			sourceTree = "<group>";
 		};
-		3CEE3A532132572E00D55B76 /* gltf */ = {
+		3CF84C8621401571003F3A07 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				3CEE3A512132548E00D55B76 /* GLTFLoader.swift */,
-				3CEE3A542132574600D55B76 /* GLTFBuffer.swift */,
-				3CEE3A572132E97200D55B76 /* GLTFScene.swift */,
-				3CEE3A592132EA4C00D55B76 /* GLTFNode.swift */,
-				3CEE3A5B2132EB1800D55B76 /* GLTFMesh.swift */,
-				3CEE3A612132EE7A00D55B76 /* GLTFAccessor.swift */,
-				3CEE3A632132EE8B00D55B76 /* GLTFBufferView.swift */,
+				3CF84C8721401582003F3A07 /* Printer.swift */,
 			);
-			path = gltf;
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C34B7D4213ED29200EBBBA7 /* box.mtl in Resources */,
+				3C34B7D5213ED29200EBBBA7 /* box.obj in Resources */,
 				3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */,
 				3CEE3A192131A4C000D55B76 /* Main.storyboard in Resources */,
 			);
@@ -285,35 +293,31 @@
 			files = (
 				3CEE3A3F2131A60200D55B76 /* Material.swift in Sources */,
 				3CEE3A482131A60200D55B76 /* Quaternion.swift in Sources */,
-				3CEE3A5A2132EA4C00D55B76 /* GLTFNode.swift in Sources */,
 				3CEE3A422131A60200D55B76 /* Node.swift in Sources */,
 				3CEE3A3D2131A60200D55B76 /* PerspectiveCamera.swift in Sources */,
-				3CEE3A642132EE8B00D55B76 /* GLTFBufferView.swift in Sources */,
-				3CEE3A622132EE7A00D55B76 /* GLTFAccessor.swift in Sources */,
 				3CEE3A4B2131A60200D55B76 /* Types.swift in Sources */,
 				3CEE3A4F2131A60200D55B76 /* Renderer.swift in Sources */,
-				3CEE3A5C2132EB1800D55B76 /* GLTFMesh.swift in Sources */,
 				3CEE3A492131A60200D55B76 /* Matrix3.swift in Sources */,
 				3CEE3A432131A60200D55B76 /* Spherical.swift in Sources */,
 				3CEE3A452131A60200D55B76 /* Vector2.swift in Sources */,
 				3CEE3A472131A60200D55B76 /* Matrix4.swift in Sources */,
 				3CEE3A442131A60200D55B76 /* Size.swift in Sources */,
-				3CEE3A582132E97200D55B76 /* GLTFScene.swift in Sources */,
 				3CEE3A4E2131A60200D55B76 /* pbr.metal in Sources */,
 				3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */,
 				3CEE3A602132EBF700D55B76 /* Black.swift in Sources */,
 				3CEE3A3C2131A60200D55B76 /* RenderNode.swift in Sources */,
+				3C0287EE2140C33500227E48 /* common.metal in Sources */,
 				3CEE3A3E2131A60200D55B76 /* Controller.swift in Sources */,
 				3CEE3A462131A60200D55B76 /* MathUtil.swift in Sources */,
+				3C34B7D0213EBAFA00EBBBA7 /* OBJLoader.swift in Sources */,
+				3CF84C8821401582003F3A07 /* Printer.swift in Sources */,
 				3CEE3A3B2131A60200D55B76 /* Geometry.swift in Sources */,
 				3CEE3A402131A60200D55B76 /* CubeNode.swift in Sources */,
 				3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */,
 				3CEE3A4A2131A60200D55B76 /* Vector3.swift in Sources */,
 				3CEE3A4D2131A60200D55B76 /* demo.metal in Sources */,
 				3CEE3A4C2131A60200D55B76 /* RenderView.swift in Sources */,
-				3CEE3A552132574600D55B76 /* GLTFBuffer.swift in Sources */,
 				3CEE3A412131A60200D55B76 /* Camera.swift in Sources */,
-				3CEE3A522132548E00D55B76 /* GLTFLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,9 @@ import Foundation
 public class Vector3 {
     
     var _x, _y, _z: Float
+    private var elements:[Float] = []
     var updated: Bool = false
+
     var x: Float {
         set {_x = newValue; updated = true}
         get {return _x}
@@ -173,6 +175,12 @@ public class Vector3 {
         z = (e[ 2] * xVal + e[ 6] * yVal + e[10] * zVal + e[14]) * w
 
         return self
+    }
+    
+    @discardableResult
+    func buffer() -> [Float] {
+        elements = [_x, _y, _z]
+        return elements
     }
 
 }

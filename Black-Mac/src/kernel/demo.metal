@@ -8,6 +8,7 @@
 
 #include <metal_stdlib>
 #include <simd/simd.h>
+#include "./pbr.h"
 
 using namespace metal;
 
@@ -17,8 +18,12 @@ struct Attribute
     float3 normal       [[attribute(1)]];
 };
 
-struct Uniform {
+struct VertexUniform {
     float4x4 matrix;
+};
+
+struct FragmentUniform {
+    float3 camera_position;
 };
 
 struct Varying
@@ -31,7 +36,7 @@ struct Varying
 vertex Varying
 vertexShader(uint vid [[vertex_id]],
              device Attribute * attribute [[buffer(0)]],
-             constant Uniform &uniform [[buffer(1)]])
+             constant VertexUniform &uniform [[buffer(1)]])
 {
     Varying out;
 
@@ -44,13 +49,14 @@ vertexShader(uint vid [[vertex_id]],
     return out;
 }
 
-
-
 fragment float4
-fragmentShader(Varying in [[stage_in]])
+fragmentShader(Varying in [[stage_in]],
+               constant FragmentUniform &uniform [[buffer(0)]])
 {
-    float3 light_direction = normalize(float3(-1.0));
-    float3 ambient = float3(0.2);
-    float radiance = saturate(dot(light_direction, in.v_normal));
-    return float4(mix(ambient, float3(radiance), 0.2), 1.0);
+    float3 L = normalize(float3(1.0));
+    float3 N = in.v_normal;
+    float3 V = normalize(uniform.camera_position - in.v_position.xyz);
+    float3 color = float3(0.2, 0.3, 0.7);
+    float3 irradience = cookTorranceBRDF(color, N, V, L, 0.25, 0.01);
+    return float4(irradience, 1.0);
 }
