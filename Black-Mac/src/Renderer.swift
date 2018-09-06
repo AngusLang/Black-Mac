@@ -3,26 +3,38 @@ import MetalKit
 
 class Renderer: NSObject, MTKViewDelegate {
     
+    let view: RenderView!
     let device: MTLDevice!
-    let queue: MTLCommandQueue!
+    let cmdQueue: MTLCommandQueue!
 
     var size: double2!
     var pixelRatio: Double = 2.0
     var pipeLine: MTLRenderPipelineState!
     var depthStencilState: MTLDepthStencilState!
+    
+    var colorFormat: MTLPixelFormat!
+    var depthFormat: MTLPixelFormat!
+    var stencilFormat: MTLPixelFormat!
 
     var camera: PerspectiveCamera!
     var controller: Controller!
-    var center = Vector3()
     var nodes: [Node] = []
     
     var vertexUniformBuffer: MTLBuffer?
     var fragmentUniformBuffer: MTLBuffer?
     
+    var passes: [Pass] = []
+    
     init(view: RenderView)  {
+        self.view = view
         view.depthStencilPixelFormat = .depth32Float_stencil8
         device = view.device
-        queue = device.makeCommandQueue()
+        
+        colorFormat = view.colorPixelFormat
+        depthFormat = view.depthStencilPixelFormat
+        stencilFormat = view.depthStencilPixelFormat
+        
+        cmdQueue = device.makeCommandQueue()
         let screenSize = NSScreen.main?.frame.size
         size = double2(Double(screenSize!.width), Double(screenSize!.height))
         
@@ -36,9 +48,9 @@ class Renderer: NSObject, MTKViewDelegate {
         render_pipe_line_des.label = pipeline_name
         render_pipe_line_des.vertexFunction = vert_func
         render_pipe_line_des.fragmentFunction = frag_func
-        render_pipe_line_des.colorAttachments[0].pixelFormat = view.colorPixelFormat
-        render_pipe_line_des.depthAttachmentPixelFormat = view.depthStencilPixelFormat
-        render_pipe_line_des.stencilAttachmentPixelFormat = view.depthStencilPixelFormat
+        render_pipe_line_des.colorAttachments[0].pixelFormat = colorFormat
+        render_pipe_line_des.depthAttachmentPixelFormat = depthFormat
+        render_pipe_line_des.stencilAttachmentPixelFormat = stencilFormat
         
         let depth_stencil_des = MTLDepthStencilDescriptor()
         depth_stencil_des.depthCompareFunction = .less
@@ -100,23 +112,30 @@ class Renderer: NSObject, MTKViewDelegate {
         
         updateUniformBuffer()
         
-        let cmd_buff = queue.makeCommandBuffer()!
+        let cmd_buff = cmdQueue.makeCommandBuffer()!
         let pass_des = view.currentRenderPassDescriptor
-        if pass_des != nil {
-            let encoder = cmd_buff.makeRenderCommandEncoder(descriptor: pass_des!)
-            encoder?.setRenderPipelineState(pipeLine)
-            encoder?.setDepthStencilState(depthStencilState)
-            encoder?.setFrontFacing(MTLWinding.clockwise)
-            encoder?.setCullMode(.back)
+        if pass_des == nil { return }
 
-            for node in nodes {
-                drawRenderNode(node, encoder: encoder!)
-            }
-            
-            encoder?.endEncoding()
-            cmd_buff.present(view.currentDrawable!)
+        let encoder = cmd_buff.makeRenderCommandEncoder(descriptor: pass_des!)
+        encoder?.setFrontFacing(MTLWinding.clockwise)
+        encoder?.setCullMode(.back)
+        
+        // render passed
+        for pass in passes {
+            pass.render(encoder: encoder!)
+        }
+
+        // standard render
+        encoder?.setRenderPipelineState(pipeLine)
+        encoder?.setDepthStencilState(depthStencilState)
+
+        for node in nodes {
+            drawRenderNode(node, encoder: encoder!)
         }
         
+        encoder?.endEncoding()
+
+        cmd_buff.present(view.currentDrawable!)
         cmd_buff.commit()
     }
 }

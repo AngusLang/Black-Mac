@@ -22,7 +22,11 @@ class ViewController: NSViewController {
         renderer = Renderer(view: renderView)
         renderView.delegate = renderer
         renderView.preferredFramesPerSecond = 60
-        renderer?.nodes.append(CubeNode())
+
+        let envmapURI = Bundle.main.path(forResource: "envmap", ofType: "jpg")
+        let envPass = EnvPass(renderer: renderer!)
+        envPass.setEnvMap(url: envmapURI!)
+        renderer?.passes.append(envPass)
         
         let loader = OBJLoader()
         let boxURI = Bundle.main.path(forResource: "box", ofType: "obj")

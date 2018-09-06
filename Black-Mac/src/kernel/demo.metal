@@ -8,7 +8,7 @@
 
 #include <metal_stdlib>
 #include <simd/simd.h>
-#include "./pbr.h"
+#include "./lib/pbr.h"
 
 using namespace metal;
 
