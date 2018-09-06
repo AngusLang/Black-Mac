@@ -139,3 +139,6 @@ Black-Mac/Black-Mac\.xcodeproj/project\.xcworkspace/xcshareddata/
 
 # mac file
 .DS_Store
+
+# hdr scene file
+*.hdr
