@@ -142,3 +142,5 @@ Black-Mac/Black-Mac\.xcodeproj/project\.xcworkspace/xcshareddata/
 
 # hdr scene file
 *.hdr
+*.mtl
+*.obj

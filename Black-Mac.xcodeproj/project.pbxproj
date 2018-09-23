@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		3C0287EE2140C33500227E48 /* common.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3C0287ED2140C33500227E48 /* common.metal */; };
 		3C34B7D0213EBAFA00EBBBA7 /* OBJLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */; };
-		3C34B7D4213ED29200EBBBA7 /* box.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3C34B7D2213ED29200EBBBA7 /* box.mtl */; };
-		3C34B7D5213ED29200EBBBA7 /* box.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3C34B7D3213ED29200EBBBA7 /* box.obj */; };
-		3C6B6409214140CA0099896E /* envmap.hdr in Resources */ = {isa = PBXBuildFile; fileRef = 3C6B6408214140CA0099896E /* envmap.hdr */; };
 		3C6B640C214141810099896E /* EnvPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B640B214141810099896E /* EnvPass.swift */; };
 		3C6B640E214142E10099896E /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B640D214142E10099896E /* Pass.swift */; };
 		3C6B6410214145FC0099896E /* envmap.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B640F214145FC0099896E /* envmap.metal */; };
-		3C6B641321417A610099896E /* envmap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C6B641221417A600099896E /* envmap.jpg */; };
+		3CB07FA521428CEC006CE637 /* monkey.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FA421428CEC006CE637 /* monkey.obj */; };
+		3CB07FA721428CF6006CE637 /* matcap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FA621428CF6006CE637 /* matcap.png */; };
+		3CB07FA9214290FB006CE637 /* StandardPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB07FA8214290FB006CE637 /* StandardPass.swift */; };
+		3CB07FAB214569D2006CE637 /* matmap_cold.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FAA214569D2006CE637 /* matmap_cold.png */; };
+		3CB07FAD21456A38006CE637 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FAC21456A38006CE637 /* sphere.obj */; };
 		3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */; };
 		3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A132131A4BF00D55B76 /* ViewController.swift */; };
 		3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE3A152131A4C000D55B76 /* Assets.xcassets */; };
@@ -38,11 +39,12 @@
 		3CEE3A4A2131A60200D55B76 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A332131A60200D55B76 /* Vector3.swift */; };
 		3CEE3A4B2131A60200D55B76 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A342131A60200D55B76 /* Types.swift */; };
 		3CEE3A4C2131A60200D55B76 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A362131A60200D55B76 /* RenderView.swift */; };
-		3CEE3A4D2131A60200D55B76 /* demo.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A382131A60200D55B76 /* demo.metal */; };
+		3CEE3A4D2131A60200D55B76 /* standard.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A382131A60200D55B76 /* standard.metal */; };
 		3CEE3A4E2131A60200D55B76 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A392131A60200D55B76 /* pbr.metal */; };
 		3CEE3A4F2131A60200D55B76 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A3A2131A60200D55B76 /* Renderer.swift */; };
 		3CEE3A602132EBF700D55B76 /* Black.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A5F2132EBF700D55B76 /* Black.swift */; };
 		3CF84C8821401582003F3A07 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF84C8721401582003F3A07 /* Printer.swift */; };
+		3CFE0DF8214DFA8A00ECBABC /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0DF7214DFA8A00ECBABC /* PlaneNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,14 +52,15 @@
 		3C0287EF2140C65100227E48 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		3C0287F02140C6CC00227E48 /* pbr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pbr.h; sourceTree = "<group>"; };
 		3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBJLoader.swift; sourceTree = "<group>"; };
-		3C34B7D2213ED29200EBBBA7 /* box.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.mtl; sourceTree = "<group>"; };
-		3C34B7D3213ED29200EBBBA7 /* box.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
-		3C6B6408214140CA0099896E /* envmap.hdr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = envmap.hdr; sourceTree = "<group>"; };
 		3C6B640B214141810099896E /* EnvPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvPass.swift; sourceTree = "<group>"; };
 		3C6B640D214142E10099896E /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
 		3C6B640F214145FC0099896E /* envmap.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = envmap.metal; sourceTree = "<group>"; };
-		3C6B641221417A600099896E /* envmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = envmap.jpg; sourceTree = "<group>"; };
 		3C6B6415214188B60099896E /* FragmentShader.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FragmentShader.md; sourceTree = "<group>"; };
+		3CB07FA421428CEC006CE637 /* monkey.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = monkey.obj; sourceTree = "<group>"; };
+		3CB07FA621428CF6006CE637 /* matcap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matcap.png; sourceTree = "<group>"; };
+		3CB07FA8214290FB006CE637 /* StandardPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardPass.swift; sourceTree = "<group>"; };
+		3CB07FAA214569D2006CE637 /* matmap_cold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matmap_cold.png; sourceTree = "<group>"; };
+		3CB07FAC21456A38006CE637 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
 		3CEE3A0E2131A4BF00D55B76 /* Black-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CEE3A132131A4BF00D55B76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,12 +86,13 @@
 		3CEE3A332131A60200D55B76 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		3CEE3A342131A60200D55B76 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		3CEE3A362131A60200D55B76 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
-		3CEE3A382131A60200D55B76 /* demo.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = demo.metal; sourceTree = "<group>"; };
+		3CEE3A382131A60200D55B76 /* standard.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = standard.metal; sourceTree = "<group>"; };
 		3CEE3A392131A60200D55B76 /* pbr.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pbr.metal; sourceTree = "<group>"; };
 		3CEE3A3A2131A60200D55B76 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		3CEE3A562132E67100D55B76 /* Black-Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Black-Mac.entitlements"; sourceTree = "<group>"; };
 		3CEE3A5F2132EBF700D55B76 /* Black.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black.swift; sourceTree = "<group>"; };
 		3CF84C8721401582003F3A07 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		3CFE0DF7214DFA8A00ECBABC /* PlaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +109,10 @@
 		3C34B7D1213ED29200EBBBA7 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				3C6B6408214140CA0099896E /* envmap.hdr */,
-				3C6B641221417A600099896E /* envmap.jpg */,
-				3C34B7D2213ED29200EBBBA7 /* box.mtl */,
-				3C34B7D3213ED29200EBBBA7 /* box.obj */,
+				3CB07FA421428CEC006CE637 /* monkey.obj */,
+				3CB07FAA214569D2006CE637 /* matmap_cold.png */,
+				3CB07FA621428CF6006CE637 /* matcap.png */,
+				3CB07FAC21456A38006CE637 /* sphere.obj */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -118,6 +122,7 @@
 			children = (
 				3C6B640B214141810099896E /* EnvPass.swift */,
 				3C6B640D214142E10099896E /* Pass.swift */,
+				3CB07FA8214290FB006CE637 /* StandardPass.swift */,
 			);
 			path = pass;
 			sourceTree = "<group>";
@@ -177,14 +182,8 @@
 		3CEE3A212131A60200D55B76 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				3C6B640A214141700099896E /* pass */,
-				3CF84C8621401571003F3A07 /* common */,
-				3CEE3A502132547500D55B76 /* loader */,
-				3CEE3A222131A60200D55B76 /* core */,
-				3CEE3A2B2131A60200D55B76 /* math */,
 				3CEE3A352131A60200D55B76 /* view */,
-				3CEE3A372131A60200D55B76 /* kernel */,
-				3CEE3A3A2131A60200D55B76 /* Renderer.swift */,
+				3CFE0DF9214DFB1E00ECBABC /* grapics */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -192,12 +191,12 @@
 		3CEE3A222131A60200D55B76 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				3CEE3A342131A60200D55B76 /* Types.swift */,
 				3CEE3A232131A60200D55B76 /* Geometry.swift */,
 				3CEE3A242131A60200D55B76 /* RenderNode.swift */,
 				3CEE3A252131A60200D55B76 /* PerspectiveCamera.swift */,
 				3CEE3A262131A60200D55B76 /* Controller.swift */,
 				3CEE3A272131A60200D55B76 /* Material.swift */,
-				3CEE3A282131A60200D55B76 /* CubeNode.swift */,
 				3CEE3A292131A60200D55B76 /* Camera.swift */,
 				3CEE3A2A2131A60200D55B76 /* Node.swift */,
 				3CEE3A5F2132EBF700D55B76 /* Black.swift */,
@@ -216,7 +215,6 @@
 				3CEE3A312131A60200D55B76 /* Quaternion.swift */,
 				3CEE3A322131A60200D55B76 /* Matrix3.swift */,
 				3CEE3A332131A60200D55B76 /* Vector3.swift */,
-				3CEE3A342131A60200D55B76 /* Types.swift */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -233,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				3C6B6411214146160099896E /* lib */,
-				3CEE3A382131A60200D55B76 /* demo.metal */,
+				3CEE3A382131A60200D55B76 /* standard.metal */,
 				3C6B640F214145FC0099896E /* envmap.metal */,
 			);
 			path = kernel;
@@ -253,6 +251,30 @@
 				3CF84C8721401582003F3A07 /* Printer.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		3CFE0DF9214DFB1E00ECBABC /* grapics */ = {
+			isa = PBXGroup;
+			children = (
+				3CFE0DFA214DFD3000ECBABC /* prefeb */,
+				3CEE3A3A2131A60200D55B76 /* Renderer.swift */,
+				3CEE3A372131A60200D55B76 /* kernel */,
+				3CEE3A2B2131A60200D55B76 /* math */,
+				3CEE3A222131A60200D55B76 /* core */,
+				3CEE3A502132547500D55B76 /* loader */,
+				3CF84C8621401571003F3A07 /* common */,
+				3C6B640A214141700099896E /* pass */,
+			);
+			path = grapics;
+			sourceTree = "<group>";
+		};
+		3CFE0DFA214DFD3000ECBABC /* prefeb */ = {
+			isa = PBXGroup;
+			children = (
+				3CEE3A282131A60200D55B76 /* CubeNode.swift */,
+				3CFE0DF7214DFA8A00ECBABC /* PlaneNode.swift */,
+			);
+			path = prefeb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,12 +340,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6B6409214140CA0099896E /* envmap.hdr in Resources */,
-				3C34B7D4213ED29200EBBBA7 /* box.mtl in Resources */,
-				3C6B641321417A610099896E /* envmap.jpg in Resources */,
-				3C34B7D5213ED29200EBBBA7 /* box.obj in Resources */,
+				3CB07FAB214569D2006CE637 /* matmap_cold.png in Resources */,
+				3CB07FAD21456A38006CE637 /* sphere.obj in Resources */,
+				3CB07FA521428CEC006CE637 /* monkey.obj in Resources */,
 				3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */,
 				3CEE3A192131A4C000D55B76 /* Main.storyboard in Resources */,
+				3CB07FA721428CF6006CE637 /* matcap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,12 +378,14 @@
 				3CEE3A462131A60200D55B76 /* MathUtil.swift in Sources */,
 				3C34B7D0213EBAFA00EBBBA7 /* OBJLoader.swift in Sources */,
 				3CF84C8821401582003F3A07 /* Printer.swift in Sources */,
+				3CFE0DF8214DFA8A00ECBABC /* PlaneNode.swift in Sources */,
 				3C6B6410214145FC0099896E /* envmap.metal in Sources */,
 				3CEE3A3B2131A60200D55B76 /* Geometry.swift in Sources */,
 				3CEE3A402131A60200D55B76 /* CubeNode.swift in Sources */,
 				3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */,
 				3CEE3A4A2131A60200D55B76 /* Vector3.swift in Sources */,
-				3CEE3A4D2131A60200D55B76 /* demo.metal in Sources */,
+				3CEE3A4D2131A60200D55B76 /* standard.metal in Sources */,
+				3CB07FA9214290FB006CE637 /* StandardPass.swift in Sources */,
 				3CEE3A4C2131A60200D55B76 /* RenderView.swift in Sources */,
 				3CEE3A412131A60200D55B76 /* Camera.swift in Sources */,
 			);
