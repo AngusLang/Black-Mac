@@ -23,21 +23,36 @@ class ViewController: NSViewController {
         renderView.delegate = renderer
         renderView.preferredFramesPerSecond = 60
 
-        let envmapURI = Bundle.main.path(forResource: "envmap", ofType: "jpg")
-        let envPass = EnvPass(renderer: renderer!)
-        envPass.setEnvMap(url: envmapURI!)
-        renderer?.passes.append(envPass)
+        
+        
+        let standardPass = StandardPass(renderer: renderer!)
+        renderer?.passes.append(standardPass)
+        
+        let plane = PlaneNode()
+        plane.scale.set(10, 1, 10)
+        plane.material?.color.set(0.97, 0.98, 0.99)
+        plane.position.y = -1
+        standardPass.addRenderNode(plane)
         
         let loader = OBJLoader()
-        let boxURI = Bundle.main.path(forResource: "box", ofType: "obj")
-        let geo = loader.load(url: boxURI!)
+        let monkeyURI = Bundle.main.path(forResource: "monkey", ofType: "obj")
+        let geo = loader.load(url: monkeyURI!)
+        let materialMap = Bundle.main.path(forResource: "matcap", ofType: "png")
         let mat = Material()
-        renderer?.nodes.append(RenderNode(geometry: geo, material: mat))
+        mat.map = materialMap
+        let monkey = RenderNode(geometry: geo, material: mat)
+        monkey.position.x = 1.5
+        standardPass.addRenderNode(monkey)
+        
+        let sphereURI = Bundle.main.path(forResource: "sphere", ofType: "obj")
+        let sphereGeo = loader.load(url: sphereURI!)
+        let sphereMapURI = Bundle.main.path(forResource: "matcap", ofType: "png")
+        let sphereMaterial = Material()
+        sphereMaterial.map = sphereMapURI
+        let sphere = RenderNode(geometry: sphereGeo, material: sphereMaterial)
+        sphere.position.x = -1.5
+        standardPass.addRenderNode(sphere)
     }
-    
-    override func mouseDown(with event: NSEvent) {
-        super.moveDown(event)
-        print("mouse down")
-    }
+
 }
 
