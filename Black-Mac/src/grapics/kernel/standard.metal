@@ -71,6 +71,6 @@ fragmentShader(Varying in [[stage_in]],
 
     float m = sqrt(pow(R.x, 2.) + pow(R.y, 2.) + pow(R.z + 1., 2.));
     float2 uv = R.xy / m * .55 + .5;
-    float3 color = envmap.sample(defaultSampler, 1.0 - uv).zyx + l_uniform.color;
+    float3 color = envmap.sample(defaultSampler, 1.0 - uv).xyz + l_uniform.color;
     return float4(color, 1.);
 }

@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C01123F215796ED00321530 /* OrthographicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01123E215796ED00321530 /* OrthographicCamera.swift */; };
 		3C0287EE2140C33500227E48 /* common.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3C0287ED2140C33500227E48 /* common.metal */; };
 		3C34B7D0213EBAFA00EBBBA7 /* OBJLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */; };
+		3C4D5B6F2190888500053914 /* OBJScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5B6E2190888500053914 /* OBJScanner.swift */; };
+		3C4D5B712190903200053914 /* OBJGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5B702190903200053914 /* OBJGeometry.swift */; };
+		3C4D5B7321912EB100053914 /* OBJMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5B7221912EB100053914 /* OBJMaterial.swift */; };
+		3C4D5B752191465E00053914 /* OBJMaterialLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5B742191465E00053914 /* OBJMaterialLoader.swift */; };
+		3C4D5B772191642500053914 /* box.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3C4D5B762191642500053914 /* box.obj */; };
+		3C4D5B792191785000053914 /* box.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3C4D5B782191784F00053914 /* box.mtl */; };
 		3C6B640C214141810099896E /* EnvPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B640B214141810099896E /* EnvPass.swift */; };
 		3C6B640E214142E10099896E /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B640D214142E10099896E /* Pass.swift */; };
 		3C6B6410214145FC0099896E /* envmap.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B640F214145FC0099896E /* envmap.metal */; };
@@ -16,7 +23,6 @@
 		3CB07FA721428CF6006CE637 /* matcap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FA621428CF6006CE637 /* matcap.png */; };
 		3CB07FA9214290FB006CE637 /* StandardPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB07FA8214290FB006CE637 /* StandardPass.swift */; };
 		3CB07FAB214569D2006CE637 /* matmap_cold.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FAA214569D2006CE637 /* matmap_cold.png */; };
-		3CB07FAD21456A38006CE637 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3CB07FAC21456A38006CE637 /* sphere.obj */; };
 		3CEE3A122131A4BF00D55B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */; };
 		3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE3A132131A4BF00D55B76 /* ViewController.swift */; };
 		3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE3A152131A4C000D55B76 /* Assets.xcassets */; };
@@ -48,10 +54,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C01123E215796ED00321530 /* OrthographicCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthographicCamera.swift; sourceTree = "<group>"; };
 		3C0287ED2140C33500227E48 /* common.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = common.metal; sourceTree = "<group>"; };
 		3C0287EF2140C65100227E48 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		3C0287F02140C6CC00227E48 /* pbr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pbr.h; sourceTree = "<group>"; };
 		3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBJLoader.swift; sourceTree = "<group>"; };
+		3C4D5B6E2190888500053914 /* OBJScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBJScanner.swift; sourceTree = "<group>"; };
+		3C4D5B702190903200053914 /* OBJGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBJGeometry.swift; sourceTree = "<group>"; };
+		3C4D5B7221912EB100053914 /* OBJMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBJMaterial.swift; sourceTree = "<group>"; };
+		3C4D5B742191465E00053914 /* OBJMaterialLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBJMaterialLoader.swift; sourceTree = "<group>"; };
+		3C4D5B762191642500053914 /* box.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
+		3C4D5B782191784F00053914 /* box.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.mtl; sourceTree = "<group>"; };
 		3C6B640B214141810099896E /* EnvPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvPass.swift; sourceTree = "<group>"; };
 		3C6B640D214142E10099896E /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
 		3C6B640F214145FC0099896E /* envmap.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = envmap.metal; sourceTree = "<group>"; };
@@ -60,7 +73,6 @@
 		3CB07FA621428CF6006CE637 /* matcap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matcap.png; sourceTree = "<group>"; };
 		3CB07FA8214290FB006CE637 /* StandardPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardPass.swift; sourceTree = "<group>"; };
 		3CB07FAA214569D2006CE637 /* matmap_cold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matmap_cold.png; sourceTree = "<group>"; };
-		3CB07FAC21456A38006CE637 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
 		3CEE3A0E2131A4BF00D55B76 /* Black-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CEE3A112131A4BF00D55B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CEE3A132131A4BF00D55B76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,9 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				3CB07FA421428CEC006CE637 /* monkey.obj */,
+				3C4D5B762191642500053914 /* box.obj */,
+				3C4D5B782191784F00053914 /* box.mtl */,
 				3CB07FAA214569D2006CE637 /* matmap_cold.png */,
 				3CB07FA621428CF6006CE637 /* matcap.png */,
-				3CB07FAC21456A38006CE637 /* sphere.obj */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 				3CEE3A292131A60200D55B76 /* Camera.swift */,
 				3CEE3A2A2131A60200D55B76 /* Node.swift */,
 				3CEE3A5F2132EBF700D55B76 /* Black.swift */,
+				3C01123E215796ED00321530 /* OrthographicCamera.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -241,6 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				3C34B7CF213EBAFA00EBBBA7 /* OBJLoader.swift */,
+				3C4D5B6E2190888500053914 /* OBJScanner.swift */,
+				3C4D5B7221912EB100053914 /* OBJMaterial.swift */,
+				3C4D5B702190903200053914 /* OBJGeometry.swift */,
+				3C4D5B742191465E00053914 /* OBJMaterialLoader.swift */,
 			);
 			path = loader;
 			sourceTree = "<group>";
@@ -309,6 +327,7 @@
 				TargetAttributes = {
 					3CEE3A0D2131A4BF00D55B76 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -341,9 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB07FAB214569D2006CE637 /* matmap_cold.png in Resources */,
-				3CB07FAD21456A38006CE637 /* sphere.obj in Resources */,
 				3CB07FA521428CEC006CE637 /* monkey.obj in Resources */,
 				3CEE3A162131A4C000D55B76 /* Assets.xcassets in Resources */,
+				3C4D5B772191642500053914 /* box.obj in Resources */,
+				3C4D5B792191785000053914 /* box.mtl in Resources */,
 				3CEE3A192131A4C000D55B76 /* Main.storyboard in Resources */,
 				3CB07FA721428CF6006CE637 /* matcap.png in Resources */,
 			);
@@ -357,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CEE3A3F2131A60200D55B76 /* Material.swift in Sources */,
+				3C01123F215796ED00321530 /* OrthographicCamera.swift in Sources */,
 				3CEE3A482131A60200D55B76 /* Quaternion.swift in Sources */,
 				3CEE3A422131A60200D55B76 /* Node.swift in Sources */,
 				3CEE3A3D2131A60200D55B76 /* PerspectiveCamera.swift in Sources */,
@@ -367,7 +388,9 @@
 				3CEE3A432131A60200D55B76 /* Spherical.swift in Sources */,
 				3C6B640C214141810099896E /* EnvPass.swift in Sources */,
 				3CEE3A452131A60200D55B76 /* Vector2.swift in Sources */,
+				3C4D5B6F2190888500053914 /* OBJScanner.swift in Sources */,
 				3CEE3A472131A60200D55B76 /* Matrix4.swift in Sources */,
+				3C4D5B7321912EB100053914 /* OBJMaterial.swift in Sources */,
 				3CEE3A442131A60200D55B76 /* Size.swift in Sources */,
 				3CEE3A4E2131A60200D55B76 /* pbr.metal in Sources */,
 				3CEE3A142131A4BF00D55B76 /* ViewController.swift in Sources */,
@@ -377,6 +400,7 @@
 				3CEE3A3E2131A60200D55B76 /* Controller.swift in Sources */,
 				3CEE3A462131A60200D55B76 /* MathUtil.swift in Sources */,
 				3C34B7D0213EBAFA00EBBBA7 /* OBJLoader.swift in Sources */,
+				3C4D5B752191465E00053914 /* OBJMaterialLoader.swift in Sources */,
 				3CF84C8821401582003F3A07 /* Printer.swift in Sources */,
 				3CFE0DF8214DFA8A00ECBABC /* PlaneNode.swift in Sources */,
 				3C6B6410214145FC0099896E /* envmap.metal in Sources */,
@@ -387,6 +411,7 @@
 				3CEE3A4D2131A60200D55B76 /* standard.metal in Sources */,
 				3CB07FA9214290FB006CE637 /* StandardPass.swift in Sources */,
 				3CEE3A4C2131A60200D55B76 /* RenderView.swift in Sources */,
+				3C4D5B712190903200053914 /* OBJGeometry.swift in Sources */,
 				3CEE3A412131A60200D55B76 /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,7 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.black.Black-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -552,7 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.black.Black-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

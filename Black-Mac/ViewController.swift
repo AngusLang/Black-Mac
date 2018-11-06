@@ -23,35 +23,24 @@ class ViewController: NSViewController {
         renderView.delegate = renderer
         renderView.preferredFramesPerSecond = 60
 
-        
-        
         let standardPass = StandardPass(renderer: renderer!)
         renderer?.passes.append(standardPass)
         
-        let plane = PlaneNode()
-        plane.scale.set(10, 1, 10)
-        plane.material?.color.set(0.97, 0.98, 0.99)
-        plane.position.y = -1
-        standardPass.addRenderNode(plane)
+        let monkeyURI = Bundle.main.path(forResource: "box", ofType: "obj")! as String
+        let basePath = (monkeyURI as NSString).deletingLastPathComponent
+        let content = try! String.init(contentsOfFile: monkeyURI, encoding: .utf8)
+        let loader = OBJLoader(source: content, basePath: basePath as NSString)
+        let shapes = try! loader.read()
+        print(shapes)
         
-        let loader = OBJLoader()
-        let monkeyURI = Bundle.main.path(forResource: "monkey", ofType: "obj")
-        let geo = loader.load(url: monkeyURI!)
-        let materialMap = Bundle.main.path(forResource: "matcap", ofType: "png")
-        let mat = Material()
-        mat.map = materialMap
-        let monkey = RenderNode(geometry: geo, material: mat)
-        monkey.position.x = 1.5
-        standardPass.addRenderNode(monkey)
-        
-        let sphereURI = Bundle.main.path(forResource: "sphere", ofType: "obj")
-        let sphereGeo = loader.load(url: sphereURI!)
-        let sphereMapURI = Bundle.main.path(forResource: "matcap", ofType: "png")
-        let sphereMaterial = Material()
-        sphereMaterial.map = sphereMapURI
-        let sphere = RenderNode(geometry: sphereGeo, material: sphereMaterial)
-        sphere.position.x = -1.5
-        standardPass.addRenderNode(sphere)
+//        let loader OBJScannerer()
+//
+//        let geo = loader.load(url: monkeyURI!)
+//        let materialMap = Bundle.main.path(forResource: "skin", ofType: "jpg")
+//        let mat = Material()
+//        mat.map = materialMap
+//        let monkey = RenderNode(geometry: geo, material: mat)
+//        standardPass.addRenderNode(monkey)
     }
 
 }
