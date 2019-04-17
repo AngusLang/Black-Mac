@@ -26,7 +26,7 @@ class ViewController: NSViewController {
         let standardPass = StandardPass(renderer: renderer!)
         renderer?.passes.append(standardPass)
         
-        let monkeyURI = Bundle.main.path(forResource: "box", ofType: "obj")! as String
+        let monkeyURI = Bundle.main.path(forResource: "monkey", ofType: "obj")! as String
         let basePath = (monkeyURI as NSString).deletingLastPathComponent
         let content = try! String.init(contentsOfFile: monkeyURI, encoding: .utf8)
         let loader = OBJLoader(source: content, basePath: basePath as NSString)
